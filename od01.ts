@@ -434,8 +434,12 @@ namespace OD01 {
         cmd2(0x20, 0x00) // SSD1306_MEMORYMODE
         cmd3(0x21, 0, 127) // SSD1306_COLUMNADDR
         cmd3(0x22, 0, 63)  // SSD1306_PAGEADDR
+        /*
         cmd1(0xa0 | 0x1) // SSD1306_SEGREMAP
         cmd1(0xc8)       // SSD1306_COMSCANDEC
+   */
+        cmd1(0xA0)       // SSD1306_SEGREMAP (normal)
+cmd1(0xC0)       // SSD1306_COMSCANINC (normal)
         cmd2(0xDA, 0x12) // SSD1306_SETCOMPINS
         cmd2(0x81, 0xCF) // SSD1306_SETCONTRAST
         cmd2(0xd9, 0xF1) // SSD1306_SETPRECHARGE
